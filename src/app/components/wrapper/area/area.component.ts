@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs/Subscription';
 import { SIDEBAR_VISIBLE } from '../../../../environments/environment';
 
 interface Collapse {
-  collapse: [any];
+  collapse: Array<any>;
 }
 
 @Component({
@@ -15,7 +15,7 @@ interface Collapse {
 })
 export class AreaComponent implements OnInit {
 
-  private collapse$: Object;
+  private collapse: boolean;
   public sidebarVisible: boolean = SIDEBAR_VISIBLE;
 
   constructor(private store: Store<Collapse[]>) {
@@ -23,10 +23,10 @@ export class AreaComponent implements OnInit {
 
   ngOnInit() {
     this.store.pipe(select('collapse'))
-      .subscribe(value => this.collapse$ = value);
+      .subscribe(value => this.collapse = value);
   }
 
   collapseSidebar() {
-    this.store.dispatch({ type: 'CHANGE_SIDEBAR_STATE', payload: !this.collapse$});
+    this.store.dispatch({ type: 'CHANGE_SIDEBAR_STATE', payload: this.collapse});
   }
 }
