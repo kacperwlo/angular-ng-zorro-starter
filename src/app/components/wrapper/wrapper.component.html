@@ -1,5 +1,5 @@
 <nz-layout>
-  <nz-sider nzCollapsible [nzCollapsed]="collapse$ | async" [nzTrigger]="null">
+  <nz-sider nzCollapsible [nzCollapsed]="collapse$ | async" [nzTrigger]="null" *ngIf="sidebarVisible">
     <h1>{{appName}}</h1>
     <ul nz-menu [nzTheme]="'dark'">
       <li nz-submenu>

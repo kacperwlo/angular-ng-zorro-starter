@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
+import { SIDEBAR_VISIBLE } from '../../../../environments/environment';
 
 interface Collapse {
   collapse: [any];
@@ -15,6 +16,7 @@ interface Collapse {
 export class AreaComponent implements OnInit {
 
   private collapse$: Object;
+  public sidebarVisible: boolean = SIDEBAR_VISIBLE;
 
   constructor(private store: Store<Collapse[]>) {
   }

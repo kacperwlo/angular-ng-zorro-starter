@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { APP_AUTHOR_NOTE } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  public author: string = 'Created by KWlodarczyk ©2018';
+  public author: string = APP_AUTHOR_NOTE;
 
   constructor() { }
 

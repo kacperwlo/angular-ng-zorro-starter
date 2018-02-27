@@ -1,6 +1,6 @@
 <nz-layout>
   <nz-header style="background: #fff; padding:0;">
-    <i class="anticon trigger" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed" (click)="collapseSidebar()"></i>
+    <i class="anticon trigger" *ngIf="sidebarVisible" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed" (click)="collapseSidebar()"></i>
   </nz-header>
   <nz-content style="margin:0 16px;">
     <nz-breadcrumb style="margin:12px 0;">
