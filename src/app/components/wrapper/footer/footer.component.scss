@@ -1,0 +1,11 @@
+:host {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  .ant-layout-footer {
+    background-color: #FFF;
+  }
+}

@@ -1,0 +1,64 @@
+:host ::ng-deep .logo {
+    height: 32px;
+    background: #333;
+    margin: 16px;
+  }
+
+  :host ::ng-deep .ant-layout-sider-collapsed {
+
+    h1 {
+        font-size: 13px;
+    
+    }
+    
+    .nav-text{
+        display: none;
+        color: black;
+    }
+  }
+
+  :host ::ng-deep .ant-layout-sider-collapsed .ant-menu-submenu-title:after {
+    display: none;
+  }
+
+  :host ::ng-deep .ant-layout-sider-collapsed .anticon {
+    font-size: 14px;
+    padding-left: 8px;
+    font-weight: bold;
+  }
+
+  :host ::ng-deep .trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 16px;
+    cursor: pointer;
+    transition: color .5s;
+  }
+
+  nz-layout {
+      height: 100%;
+      font-weight: bold;
+      
+
+      h1 {
+          font-weight: bold;
+          color: #FFF;
+          text-align: center;
+          padding: 10px 0px 10px 0px;
+      }
+
+      nz-sider {
+          background-color: #FF6F00;
+          z-index: 3;
+
+          ul {
+              background-color: #ff8100;
+
+              .ant-menu-item-selected {
+                  background-color: #E65100;
+                  font-weight: bold;
+              }
+          }
+      }
+  }
+  
